@@ -67,7 +67,7 @@ jobs:
           directory: ${{ steps.strings.outputs.build-output-dir }}
           exclusions: '*.git* /*node_modules/* .editorconfig'
 
-      - name: Release
+      - name: ${{ matrix.os }} Release
         uses: ncipollo/release-action@v1.12.0
         with:
           artifacts: ${{ steps.strings.outputs.build-output-zip }}
