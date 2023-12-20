@@ -24,7 +24,7 @@ jobs:
         uses: thedoctor0/zip-release@main
         with:
           type: 'zip'
-          filename: release.zip
+          filename: ${{ github.workspace }}/release.zip
           directory: path/to/artifact/
           exclusions: '*.git* /*node_modules/* .editorconfig'
 
